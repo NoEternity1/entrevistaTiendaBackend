@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "api backend para la entrevista donde piden crear una tienda online",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoEternity1/entrevistaTiendaBackend.git"
+  },
+  "author": "Cristian Undurraga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoEternity1/entrevistaTiendaBackend/issues"
+  },
+  "homepage": "https://github.com/NoEternity1/entrevistaTiendaBackend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
