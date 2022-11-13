@@ -9,8 +9,6 @@ require('dotenv').config();
 //express
 const app = express();
 
-const PORT = process.env.PORT || 3000;
-
 //bodyparser
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -132,6 +130,11 @@ app.get("/buscar/:buscarProductoNombre", function(req, res){
 
 
 //listener
+let PORT = process.env.PORT;
+if (PORT == null || PORT == "") {
+    PORT = 3000;
+}
+
 app.listen(PORT, () => {
     console.log("servidor en puerto 3000");
 })
