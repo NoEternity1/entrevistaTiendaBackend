@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const mysql = require("mysql");
 require('dotenv').config();
+const cors = require('cors')
 
 //express
 const app = express();
@@ -16,7 +17,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 //CORS
-app.use((req, res, next) => {
+app.use(cors());
+/*app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
     res.header(
       "Access-Control-Allow-Headers",
@@ -30,7 +32,7 @@ app.use((req, res, next) => {
       return res.status(200).json({})
     }
     next()
-  })
+  })*/
 
 //dbConnect
 const pool = mysql.createPool({
